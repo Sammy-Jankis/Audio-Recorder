@@ -1,0 +1,35 @@
+module audio_converter (
+	input AUD_BCK,    
+	input AUD_LRCK,   
+	input AUD_ADCDAT,
+	output AUD_DATA,
+	
+	input iRST_N,  
+	input [15:0] AUD_outL,
+	input [15:0] AUD_outR,
+	output reg[15:0] AUD_inL,
+	output reg[15:0] AUD_inR
+);
+//
+
+
+reg [3:0] SEL_Cont;
+
+
+always@(negedge AUD_BCK or negedge iRST_N)
+begin
+	if(!iRST_N) SEL_Cont <= 4'h0;
+	else
+	begin
+	   SEL_Cont <= SEL_Cont+1'b1; 
+	   if (AUD_LRCK) 
+			AUD_inL[~(SEL_Cont)] <= AUD_ADCDAT;
+	   else 
+			AUD_inR[~(SEL_Cont)] <= AUD_ADCDAT;
+	end
+end
+//
+
+assign AUD_DATA = (AUD_LRCK)? AUD_outL[~SEL_Cont]: AUD_outR[~SEL_Cont] ;
+
+endmodule

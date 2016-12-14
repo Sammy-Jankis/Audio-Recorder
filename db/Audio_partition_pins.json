@@ -1,0 +1,365 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "I2C_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_CE_n",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_OE_n",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_WE_n",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[8]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[9]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[10]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[11]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[12]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[13]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[14]",
+					"strict" : false
+				},
+				{
+					"name" : "audio_inL[15]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
+					"strict" : false
+				},
+				{
+					"name" : "PB",
+					"strict" : false
+				},
+				{
+					"name" : "REC",
+					"strict" : false
+				},
+				{
+					"name" : "HIGH",
+					"strict" : false
+				},
+				{
+					"name" : "LOW",
+					"strict" : false
+				},
+				{
+					"name" : "RUN_THRU",
+					"strict" : false
+				},
+				{
+					"name" : "STOP",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

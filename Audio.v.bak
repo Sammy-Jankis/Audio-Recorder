@@ -1,0 +1,64 @@
+module audio(
+	input CLOCK_50,
+	input KEY, 
+	inout I2C_SDAT,
+	output I2C_SCLK,
+	output AUD_ADCLRCK,
+	input AUD_ADCDAT,
+	output AUD_DACLRCK,
+	output AUD_DACDAT,
+	inout AUD_BCLK,
+	output AUD_XCK
+	inout [35:0] GPIO_0, GPIO_1
+	);
+	
+	assign GPIO_0     = 36'hzzzzzzzzz;
+	assign GPIO_1     = 36'hzzzzzzzzz;
+	
+	wire [6:0] myclock;
+	wire RST;
+	assign RST = KEY;
+	
+	I2C_Config u3 (
+		.iClk(CLOCK_50),
+		.RST_N(KEY),
+		
+		.I2C_SCLK(I2C_SCLK),
+		.I2C_SDAT(I2C_SDAT)
+		);
+		
+	assign AUD_ADCLRCK  = AUD_DACLRCK;
+	assign AUD_XCK      = AUD_CTRL_CLK;
+	
+	audio_clock u4(
+		.oAUD_BCK(AUD_BCLK),
+		.oAUD_LRCK(AUD_DACLRCK),
+		
+		.iCLK_18_4(AUD_CTRL_CLK),
+		.iRST_N(DLY_RST)
+		);
+	
+	wire [15:0] audio_inL, audio_inR;
+	reg [15:0] audio_outL, audio_outR;
+	
+	always @ (negedge AUD_DACLRCK)
+		audio_outR <= audio_inL;
+	
+	always @ (posedge AUD_DACLRCK)
+		audio_outL <= audio_inL;
+		
+	audio_converter u5(
+		.AUD_BCK(AUD_BCLK),
+		.AUD_LRCK(AUD_DACLRCK),
+		.AUD_ADCDAT(AUD_ADCDAT).
+		.AUD_DATA(AUD_DACDAT),
+		
+		.iRST_N(DLY_RST),
+		.AUD_outL(audio_outL),
+		.AUD_outR(audio_outR),
+		.AUD_inL(audio_inL),
+		.AUD_inR(audio_inR)
+		);
+		
+endmodule
+	
