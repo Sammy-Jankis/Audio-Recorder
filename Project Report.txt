@@ -1,0 +1,21 @@
+Matthew Carroll
+Trevor Hughes-Smith
+ECE 287
+Final Project Report
+Description
+For our project, we wanted to create a design that allows users to both listen to audio coming into the LINE IN, as well as record the audio and store it for future playback. We then wanted to allow the user to change characteristics of the sound for playback, so for our design we decided on two filters: HIGHspeed and HALFspeed. Using an MP3 player, microphone, or other form of device that outputs to a 3.5mm jack, the user can play music and record up to 10 seconds for playback with FX.
+Background
+To gain an understanding in approaching the problem, we needed to figure out how each piece of the system would interact with one another. The main components to learn were the CODEC, SRAM, and I2C configuration. The CODEC reads the audio and allows for coding or decoding through analog-to-digital for the input and digital-to-analog for output (ADC and DAC). We then needed to understand how to store and access the information in the SRAM. The first two bits of memory stored are grouped in as SRAM_DQ[0] for left and SRAM_DQ[1] for right. The 16-bit deep dual channel audio required us to store all left/right bits in pairs to allow for consistent access for playback.
+Process
+The system transmits data from the CODEC to the SRAM to be read out. We used two different procedures to speed up and slow down the audio. To slow it down, the system would recognize if a pair had already been read yet using a variable (LOWCHECK). If it had only been ready once, the top level module repeats the last two addresses and changes the value of LOWCHECK to ensure each pair is only played twice. It then resets the variable and moves on to the next pair resulting in every bit stored being retrieved two times. This pattern causes the audio to playback in a manner that is perceived as slowed down. To speed it up, we had the module skip every other address pair in order to shorten the total playback time and give the playback the sped up quality.
+Problems
+While designing this project, the biggest obstacles were getting the CODEC into the correct mode and having the states change in the correct manner as to ensure a smooth read/write transition in SRAM. After finding some helpful code online regarding the CODEC configuration, we were able to get it working and just had to ensure that it was reading and writing at the proper speeds. 
+
+Results
+The design now works as expected. The record and pass through can be on at the same time, and it will record up to 10 seconds of audio, which can be played back at 3 different speeds.
+
+Citation
+      Audio/VGA Pll synthesized using PLL wizard by Joe Yang from http://www.johnloomis.org/digitallab/audio/audio1/audio1.qdoc.html
+  
+      I2C config used LUT data to configure CODEC. CODEC control signals were parsed from spec sheet and http://www.johnloomis.org/digitallab/audio/audio1/audio1.qdoc.html
+
