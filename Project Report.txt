@@ -6,7 +6,7 @@ Final Project Report
 	
 	Description
 
-For our project, we wanted to create a design that allows users to both listen to audio coming into the LINE IN, as well as record the audio and store it for future playback. We then wanted to allow the user to change characteristics of the sound for playback, so for our design we decided on two filters: HIGHspeed and HALFspeed. Using an MP3 player, microphone, or other form of device that outputs to a 3.5mm jack, the user can play music and record up to 10 seconds for playback with FX.
+For our project, we wanted to create a design that allows users to both listen to audio coming into the LINE IN, as well as record the audio and store it for future playback. We then wanted to allow the user to change characteristics of the sound for playback, so for our design we decided on two filters: HIGHspeed and HALFspeed. Using an MP3 player, microphone, or other form of device that outputs audio using  3.5mm jack, the user can play music and record up to 10 seconds for playback with their choice of FX.
 	
 	Video
 		https://youtu.be/6W9nbMec9DQ
@@ -17,7 +17,7 @@ To gain an understanding in approaching the problem, we needed to figure out how
 
 	Process
 	
-The system transmits data from the CODEC to the SRAM to be read out. We used two different procedures to speed up and slow down the audio. To slow it down, the system would recognize if a pair had already been read yet using a variable (LOWCHECK). If it had only been ready once, the top level module repeats the last two addresses and changes the value of LOWCHECK to ensure each pair is only played twice. It then resets the variable and moves on to the next pair resulting in every bit stored being retrieved two times. This pattern causes the audio to playback in a manner that is perceived as slowed down. To speed it up, we had the module skip every other address pair in order to shorten the total playback time and give the playback the sped up quality.
+The system transmits data from the CODEC to the SRAM to be read out. We used two different procedures to speed up and slow down the audio. To slow it down, the system would recognize if a pair had already been read yet using a variable (LOWCHECK). If it had only been ready once, the top level module repeats the last two addresses and changes the value of LOWCHECK to ensure each pair is only played twice. It then resets the variable and moves on to the next pair resulting in every bit stored being retrieved two times. This pattern causes the audio to playback in a manner that is perceived as slowed down. To speed it up, we had the module skip every other address pair in order to shorten the total playback time and give the playback the sped up quality. We also included LEDs which indicate to the user which mode the device is in and if it is currently recording any audio.
 
 	Problems
 
