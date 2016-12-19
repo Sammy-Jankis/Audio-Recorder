@@ -9,7 +9,7 @@ Final Project Report
 For our project, we wanted to create a design that allows users to both listen to audio coming into the LINE IN, as well as record the audio and store it for future playback. We then wanted to allow the user to change characteristics of the sound for playback, so for our design we decided on two filters: HIGHspeed and HALFspeed. Using an MP3 player, microphone, or other form of device that outputs audio using  3.5mm jack, the user can play music and record up to 10 seconds for playback with their choice of FX.
 	
 	Video
-		https://youtu.be/6W9nbMec9DQ
+		https://www.youtube.com/watch?v=H8moRUNi4MQ
 
 	Background
 	
